@@ -1,0 +1,22 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+        - selenium
+        - paths:
+          - /webscraper_belvilla.py
+      </py-env>
+    </head>
+
+  <body>
+    <h1>Let's print accomdations</h1>
+    <b>Doe's lucky number is <label id="data"></label></b>
+    <py-script>
+      from webscraper_belvilla import main
+      pyscript.write('lucky', main())
+      from webscraper_belvilla import get_data
+      pyscript.write('data', get_data(url))
+    </py-script>
+  </body>
+</html>
